@@ -9,9 +9,7 @@ body {
   height: 100vh;
   background-color: #000000;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 
@@ -40,22 +38,71 @@ img {
 }
 
 button {
-  font-size: 1em;
+  font-size: 3em;
   font-weight: bold;
   color: white;
   background-color: blueviolet;
   border: 0;
-  padding: 5px 25px;
+  padding: 10px 50px;
   transform: skewX(-15deg);
   cursor: pointer;
   transition: 0.2s;
+  box-shadow: 15px 15px 0px black;
+  
 
 }
 
 button:hover {
-  padding-right: 40px;
+  padding-right: 80px;
+  box-shadow: 20px 20px 0px gold;
 }
 
 span.arrow {
-  margin-left: 20px;
+  margin-left: 25px;
+  position: relative;
+  transform: skewX(15deg) !important;
+}
+
+span.arrow i{
+  transform: skewX(15deg);
+  color: white;
+  transition: 0.2s;
+}
+
+span.arrow i:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 2.7px;
+  animation-delay: 0.5s;
+}
+
+span.arrow i:nth-child(3) {
+  position: absolute;
+  right: 0;
+  top: 2.7px;
+  animation-delay: 1s;
+}
+
+button:hover i:nth-child(2) {
+  right: -20px;
+}
+
+button:hover i:nth-child(3) {
+  right: -40px;
+}
+
+button:hover i {
+  animation: color 2s infinite linear;
+}
+
+@keyframes color {
+  0% {
+    color: white;
+  }
+  50% {
+    color: blueviolet;
+  }
+  100% {
+    color: white;
+  }
 }
