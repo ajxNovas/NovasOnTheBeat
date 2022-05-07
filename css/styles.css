@@ -3,6 +3,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100vh;
+  background-color: #000000;
 }
 
 .acceuil {
@@ -14,4 +15,14 @@ body {
   background-size: cover;
   background-color: #000000;
   background-position: center;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
