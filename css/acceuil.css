@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     list-style: none;
     text-decoration: none;
     font-family: 'Monument Extended', sans-serif;
@@ -183,3 +184,191 @@ width: 100%;
 }
 
 
+/*--SECTION 2--*/
+input {
+    display: none;
+}
+
+.sec2 .container {
+    width: 100%;
+    text-align: center;
+}
+
+.sec2 .container h1 {
+    font-size: 35px;
+    font-weight: normal;
+    position: relative;
+    margin: 40px 0;
+}
+
+.sec2 .container h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #e25112;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 100px;
+    }
+
+    50% {
+        width: 200px;
+    }
+
+    100% {
+        width: 100px;
+    }
+}
+
+.top-content {
+    background-color: rgb(228, 228, 228);
+    width: 90%;
+    margin: 0 auto 20px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+}
+
+.sec2 .container .top-content h3 {
+    height: 100%;
+    background-color: lightgray;
+    line-height: 45px;
+    padding: 0 50px;
+    color: black;
+}
+
+label {
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 45px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    transition: .5s;
+}
+
+label:hover {
+    color: orange;
+}
+
+.instru-gallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.instru {
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.instru img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.instru::before {
+    content: "ECOUTER";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: 0.2s;
+    z-index: 1;
+
+}
+
+.instru:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    border-radius: 10px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.instru:hover:after {
+    height: 100%;
+}
+
+.instru:hover::before {
+    margin-top: 0;
+    opacity: 1;
+}
+
+#check1:checked ~ .container .instru-gallery .pic {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+
+#check2:checked ~ .container .instru-gallery .a {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check2:checked ~ .container .instru-gallery .b,
+#check2:checked ~ .container .instru-gallery .c {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+#check3:checked ~ .container .instru-gallery .b {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check3:checked ~ .container .instru-gallery .a,
+#check3:checked ~ .container .instru-gallery .c {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+#check4:checked ~ .container .instru-gallery .c {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+#check4:checked ~ .container .instru-gallery .a,
+#check4:checked ~ .container .instru-gallery .b {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
