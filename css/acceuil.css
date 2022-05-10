@@ -98,6 +98,7 @@ header .container {
 
 header .container ul{
     display: flex;
+    margin-left: -90px;
 }
 
 header .container ul a {
@@ -107,6 +108,17 @@ header .container ul a {
     color: white;
     margin: 0 30px;
 }
+
+.logo img {
+    width: 90px;
+    height: auto;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .logo img:hover {
+    width: 95px;
+    height: auto;
+  }
 
 @media (max-width :1500px ) {
     header {
@@ -174,7 +186,7 @@ width: 100%;
     transition: 0.3s;
     overflow: hidden;
     cursor: pointer;
-    background-image: url(/img/arrplan.jpg);
+    background-image: url(/img/giphy.gif);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -190,7 +202,7 @@ width: 100%;
     height: 50px;
     width: 75px;
     border-radius: 50px;
-    background-color: #e25112;
+    background-color: rgb(255, 72, 0);
     top: -3px;
     left: -3px;
     transform: translate(-100%);
@@ -248,7 +260,7 @@ input {
 .sec2 .container {
     width: 100%;
     text-align: center;
-    background-color: #e25112;
+    background-color: #010305;
 }
 
 .sec2 .container h1 {
@@ -256,6 +268,7 @@ input {
     font-weight: normal;
     position: relative;
     margin: 40px 0;
+    color: white;
 }
 
 .sec2 .container h1::before {
@@ -332,23 +345,12 @@ label:hover {
     border-radius: 10px;
     box-shadow: 3px 3px 5px black;
     cursor: pointer;
-    transition: .5s;
 }
 
 .instru img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    transition: .5s;
-}
-
-.instru:hover:after {
-    height: 100%;
-}
-
-.instru:hover::before {
-    margin-top: 0;
-    opacity: 1;
 }
 
 #check1:checked ~ .container .instru-gallery .pic {
