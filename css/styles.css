@@ -31,13 +31,13 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.3s ease-in-out;
+
   
 }
 
 img:hover {
   width: 555px;
   height: auto;
-  
 }
 
 button {
