@@ -31,71 +31,11 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.3s ease-in-out;
-
-  
 }
 
 img:hover {
   width: 555px;
   height: auto;
-}
-
-button {
-  font-size: 3em;
-  font-weight: bold;
-  color: white;
-  background-color: blueviolet;
-  border: 0;
-  padding: 10px 50px;
-  transform: skewX(-15deg);
-  cursor: pointer;
-  transition: 0.2s;
-  box-shadow: 15px 15px 0px black;
-  
-
-}
-
-button:hover {
-  padding-right: 80px;
-  box-shadow: 20px 20px 0px gold;
-}
-
-span.arrow {
-  margin-left: 25px;
-  position: relative;
-  transform: skewX(15deg) !important;
-}
-
-span.arrow i{
-  transform: skewX(15deg);
-  color: white;
-  transition: 0.2s;
-}
-
-span.arrow i:nth-child(2) {
-  position: absolute;
-  right: 0;
-  top: 2.7px;
-  animation-delay: 0.5s;
-}
-
-span.arrow i:nth-child(3) {
-  position: absolute;
-  right: 0;
-  top: 2.7px;
-  animation-delay: 1s;
-}
-
-button:hover i:nth-child(2) {
-  right: -20px;
-}
-
-button:hover i:nth-child(3) {
-  right: -40px;
-}
-
-button:hover i {
-  animation: color 2s infinite linear;
 }
 
 @keyframes color {

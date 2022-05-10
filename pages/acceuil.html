@@ -14,15 +14,22 @@
 
     <body>
 
+        <div class="onglet-side">
+            <a href="#acceuil" class="active"></a>
+            <a href="#instrumentales"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+
         <header>
             <div class="container">
                 <div class="logo">
-                    <img src="/img/lg.png" alt="">
+                    <a href="/index.html"><img src="/img/lg.png" alt=""></a>
                 </div>
                 <div class="onglet">
                     <ul>
-                        <li><a href="#">ACCEUIL</a></li>
-                        <li><a href="#">INSTRUMENTALES</a></li>
+                        <li><a href="#acceuil">ACCEUIL</a></li>
+                        <li><a href="#instrumentales">INSTRUMENTALES</a></li>
                         <li><a href="#">SERVICES</a></li>
                         <li><a href="#">À PROPOS</a></li>
                     </ul>
@@ -31,7 +38,7 @@
             </div>
         </header>
 
-        <div class="sec1">
+        <div class="sec1" id="acceuil">
 
             <div class="box">
                 </i><a href="https://www.youtube.com/channel/UCXNPLOvcJilLt6P9pn66Htw"><i class="fa-brands fa-youtube"></i></a>
@@ -43,7 +50,7 @@
                 <h1><CENTER>N'OVA.S ON<br><pre> THE BEAT </pre></CENTER></h1>
                 <a href="#">
                     <button>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <a href="#instrumentales"><i class="fa-solid fa-chevron-down"></i></a>
                     </button>
                 </a>
             </div>
@@ -51,7 +58,7 @@
 
 
 
-        <div class="sec2">
+        <div class="sec2" id="instrumentales">
             <input type="radio" name="instrus" id="check1" checked>
             <input type="radio" name="instrus" id="check2">
             <input type="radio" name="instrus" id="check3">
@@ -69,7 +76,7 @@
 
                 <div class="instru-gallery">
                     <div class="instru a">
-                        <img src="/img/pdg.jpg">
+                        <a href="https://www.youtube.com/watch?v=ViP6GzBJpd8"><img src="/img/pdg.jpg"></a>
                     </div>
 
                     <div class="instru a">
@@ -108,6 +115,15 @@
 
             </div>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+        <script type="text/javascript">
+            $(document).on("click", ".onglet-side a", function () {
+                $(this).addClass("active").siblings().removeClass("active")
+            })
+        </script>
+
 
     </body>
 
