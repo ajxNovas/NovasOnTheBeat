@@ -102,7 +102,6 @@ header .container ul{
 }
 
 header .container ul a {
-    font-family: 'tahoma';
     font-size: 1em;
     font-weight: 500;
     color: white;
@@ -110,13 +109,22 @@ header .container ul a {
 }
 
 .logo img {
-    width: 90px;
+    width: 70px;
     height: auto;
     transition: 0.3s ease-in-out;
   }
   
   .logo img:hover {
-    width: 95px;
+    width: 80px;
+    height: auto;
+  }
+
+  .onglet a {
+    transition: 0.3s ease-in-out;
+  }
+
+  .onglet a:hover {
+    color: #4d07f1;
     height: auto;
   }
 
@@ -261,10 +269,10 @@ input {
 .sec2 .container {
     width: 100%;
     text-align: center;
-    /*background-image: url(/img/giphy.gif);
+    background-color: #010305;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;*/
+    background-size: cover;
 }
 
 .sec2 .container h1 {
@@ -332,7 +340,7 @@ label {
 }
 
 label:hover {
-    color: orange;
+    color: rgb(183, 0, 255);
 }
 
 #check1:checked ~ .menu_item {
